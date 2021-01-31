@@ -1,0 +1,3 @@
+DESC:NULL encryption module for eggdrop
+DESC:
+DESC:Stores user passwords in clear text.
