@@ -27,7 +27,12 @@ clean:
 	@rm -f .depend *.o *.so *~
 
 #safety hash
-../noencrypt.o: noencrypt.c ../module.h ../../../config.h ../../main.h \
- ../../lang.h ../../eggdrop.h ../../flags.h ../../proto.h \
- ../../../lush.h ../../cmdt.h ../../tclegg.h ../../tclhash.h \
- ../../chan.h ../../users.h ../modvals.h ../../tandem.h
+noencrypt.o: noencrypt.c ../module.h ../../../src/main.h \
+ ../../../config.h ../../../eggint.h ../../../lush.h ../../../src/lang.h \
+ ../../../src/eggdrop.h ../../../src/compat/in6.h ../../../src/flags.h \
+ ../../../src/cmdt.h ../../../src/tclegg.h ../../../src/tclhash.h \
+ ../../../src/chan.h ../../../src/users.h ../../../src/compat/compat.h \
+ ../../../src/compat/base64.h ../../../src/compat/inet_aton.h \
+ ../../../src/compat/snprintf.h ../../../src/compat/gethostbyname2.h \
+ ../../../src/compat/explicit_bzero.h ../../../src/compat/strlcpy.h \
+ ../modvals.h ../../../src/tandem.h
