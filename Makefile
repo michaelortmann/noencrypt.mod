@@ -1,5 +1,4 @@
 # Makefile for src/mod/noencrypt.mod/
-# $Id: Makefile,v 1.10 1999/12/15 02:32:58 guppy Exp $
 
 doofus:
 	@echo ""
