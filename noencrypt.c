@@ -57,8 +57,10 @@ char *noencrypt_start (Function * global_funcs)
         return "Already loaded.";
       Context;
       module_register(MODULE_NAME, noencrypt_table, 1, 0);
-      if (!module_depend(MODULE_NAME, "eggdrop", 108, 0))
-        return "This module requires eggdrop1.8.0 or later";
+      if (!module_depend(MODULE_NAME, "eggdrop", 108, 4)) {
+        module_undepend(MODULE_NAME);
+        return "This module requires Eggdrop 1.8.4 or later.";
+      }
       add_hook(HOOK_ENCRYPT_PASS, (Function) encrypt_pass);
       }
    return NULL;
