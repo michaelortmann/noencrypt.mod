@@ -1,9 +1,6 @@
 /*
  * noencrypt.c - no encryption of passwords
  */
-/*
- * Sep 2010: modified by pseudo to run on eggdrop 1.8.x
- */
  
 #define MAKING_NOENCRYPT
 #define MODULE_NAME "encryption" /* allegdedly ;) */
@@ -56,7 +53,7 @@ char *noencrypt_start (Function * global_funcs)
       if (!module_rename("noencrypt",MODULE_NAME))
         return "Already loaded.";
       Context;
-      module_register(MODULE_NAME, noencrypt_table, 1, 0);
+      module_register(MODULE_NAME, noencrypt_table, 1, 5);
       if (!module_depend(MODULE_NAME, "eggdrop", 108, 4)) {
         module_undepend(MODULE_NAME);
         return "This module requires Eggdrop 1.8.4 or later.";

@@ -1,9 +1,4 @@
 I take no credit for the code at all, someone else did it and i just wanted to use this module on 1.4.x
 
--- changes
-Modified by pseudo to compile and run on 1.8.x
-Makefile updated for 1.4.x (taken from assoc.mod Makefile)
-2 calls to function Context changed (originally context() )
-
 ragnar <ragnar@starshadow.com>
 ragnar@efnet
