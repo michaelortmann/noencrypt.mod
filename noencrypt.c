@@ -19,7 +19,6 @@ static int noencrypt_expmem()
 /* a report on the module status */
 static void noencrypt_report (int idx, int details)
 {
-   Context;
    if (details) {
      dprintf(idx, "    NULL encryption module\n");
      dprintf(idx, "    Passwords are stored in clear text!\n");
@@ -33,7 +32,7 @@ static char *noencrypt_close()
 
 static void encrypt_pass (char * text, char * new)
 {
-strcpy(new, text);
+  strcpy(new, text);
 }
 
 char *noencrypt_start ();
@@ -52,8 +51,7 @@ char *noencrypt_start (Function * global_funcs)
       global = global_funcs;
       if (!module_rename("noencrypt",MODULE_NAME))
         return "Already loaded.";
-      Context;
-      module_register(MODULE_NAME, noencrypt_table, 1, 5);
+      module_register(MODULE_NAME, noencrypt_table, 1, 6);
       if (!module_depend(MODULE_NAME, "eggdrop", 108, 4)) {
         module_undepend(MODULE_NAME);
         return "This module requires Eggdrop 1.8.4 or later.";
